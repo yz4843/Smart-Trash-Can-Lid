@@ -2,15 +2,11 @@
 
 This project implements a local, AI-powered smart trash can assistant using a Raspberry Pi 5. It classifies waste using image recognition and can interact with users via voice when uncertain, combining real-time image classification, speech-to-text transcription, and large language model reasoning — all fully offline.
 
----
-
 ## System Requirements
 
 - **Platform**: Raspberry Pi 5
 - **OS**: Raspberry Pi OS Desktop 64-bit (Bookworm)
 - **Python**: 3.11+ (recommended to use virtual environment)
-
----
 
 ## Hardware Components
 
@@ -22,8 +18,6 @@ This project implements a local, AI-powered smart trash can assistant using a Ra
 
 > Follow the official BrainCraft HAT setup guide to configure hardware:  
 > https://learn.adafruit.com/adafruit-braincraft-hat-easy-machine-learning-for-raspberry-pi
-
----
 
 ## Environment Setup
 
@@ -56,8 +50,6 @@ pip install tflite-runtime requests
 > If using `whisper` with CPU:  
 > `pip install git+https://github.com/openai/whisper.git`
 
----
-
 ## Project Structure
 
 ```
@@ -71,8 +63,6 @@ project/
 ├── README.md
 └── ...
 ```
-
----
 
 ## How to Run
 
@@ -100,16 +90,12 @@ The script will:
 - Activate your Python environment.
 - Run `main.py` with the specified model and label file.
 
----
-
 ## Models Used
 
 - **Image Classification**: MobileNetV2 (TFLite, 160x160 input, 0.75 width)
 - **Speech Recognition**: Whisper (tiny.en)
 - **Language Model**: LLaMA 3.2 (1B), via Ollama
 - **TTS**: pico2wave (via subprocess, no GPU required)
-
----
 
 ## Features
 
@@ -118,16 +104,12 @@ The script will:
 - Local LLM-powered conversation and classification refinement
 - Servo-controlled lid with LED indicator feedback
 
----
-
 ## Future Improvements
 
 - Add support for more waste categories (e.g., compostable, hazardous)
 - Enable multilingual interactions
 - Explore gamification features for community engagement
 - Open-source hardware and 3D files for reproducibility
-
----
 
 ## License
 
